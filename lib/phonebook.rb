@@ -21,8 +21,10 @@ class PhoneBook
   
   #get city names from the hash
   def get_city_names()
-    @dial_book.each do |key, value|
+    dial_keys = @dial_book.map do |key, value|
+      key
     end
+    dial_keys
   end
 end
   
