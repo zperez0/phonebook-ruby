@@ -26,12 +26,15 @@ class PhoneBook
     end
     dial_keys
   end
-end
   
   # get area code on given hash & key
-  # def get_area_code(somehash, key)
-  
-  # end
+  def get_area_code()
+    dial_values = @dial_book.map do |key, value|
+      value
+  end
+  dial_values
+  end
+end
   
   # # exectution flow /loop
   # loop do

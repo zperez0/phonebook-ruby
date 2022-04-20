@@ -20,8 +20,8 @@ describe(PhoneBook) do
     # end
 
     it('return the keys of dial_book') do
-      callme2 = PhoneBook.new()
-      expect(callme2.get_city_names).to(eq([
+      callme = PhoneBook.new()
+      expect(callme.get_city_names).to(eq([
         "newyork",
         "newbrunswick",
         "edison",
@@ -32,6 +32,24 @@ describe(PhoneBook) do
         "evanston",
         "orlando",
         "lancaster"
+      ]))
+    end
+  end
+  
+  describe('#get_area_code') do
+    it('return the values of dial_book') do
+      callme2 = PhoneBook.new()
+      expect(callme2.get_area_code).to(eq([
+        "212",
+        "732",
+        "908",
+        "609",
+        "301",
+        "305",
+        "650",
+        "847",
+        "407",
+        "717"
       ]))
     end
   end
