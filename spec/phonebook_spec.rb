@@ -38,8 +38,8 @@ describe(PhoneBook) do
   
   describe('#get_area_code') do
     it('return the values of dial_book') do
-      callme2 = PhoneBook.new()
-      expect(callme2.get_area_code).to(eq([
+      callme = PhoneBook.new()
+      expect(callme.get_area_code).to(eq([
         "212",
         "732",
         "908",
