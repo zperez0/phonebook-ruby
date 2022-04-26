@@ -2,9 +2,9 @@
 
 class PhoneBook
 
-  attr_accessor :dial_book
+  attr_reader :dial_book
 
-  def initialize()
+  def initialize(dial_book)
   @dial_book = {
     "newyork" => "212",
     "newbrunswick" => "732",
@@ -20,23 +20,28 @@ class PhoneBook
   end
   
   #get city names from the hash
-  def get_city_names()
-    dial_keys = @dial_book.map do |key, value|
+  def get_city_names(city_names)
+    city_names = @dial_book.map do |key, value|
       key
     end
-    dial_keys
+    city_names
   end
+
+  
   
   # get area code on given hash & key
-  def get_area_code()
-    dial_values = @dial_book.map do |key, value|
+  def get_area_code(area_code, inputkey)
+    area_code = @dial_book.map do |key, value|
       value
   end
-  dial_values
+  area_code
+  end
+
+  
+  returns methods based on user input
+  def phonebook_checker(city_names)
+    if get_city_names() == city_names
+      return get_area_code()
+    end
   end
 end
-  
-  # # exectution flow /loop
-  # loop do
-  
-  # end
